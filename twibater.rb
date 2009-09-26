@@ -6,6 +6,14 @@ get '/' do
   haml :index
 end
 
+get '/robots.txt' do
+  raise Sinatra::NotFound
+end
+
+get '/favicon.ico' do
+  raise Sinatra::NotFound
+end
+
 get '/:username' do
   haml :error if params[:username].blank?
   haml :user
