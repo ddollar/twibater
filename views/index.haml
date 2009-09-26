@@ -1,0 +1,14 @@
+%form{ :method => :post, :onsubmit => 'return(process_form());' }
+
+  %label{ :for => 'username' } Twitter Username
+  %input{ :type => 'text', :name => 'username', :id => 'username' }
+
+:javascript
+
+  document.getElementById('username').focus();
+
+  function process_form() {
+    var username = document.getElementById('username').value;
+    document.location.href = '/' + username;
+    return(false);
+  }

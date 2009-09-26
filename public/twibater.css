@@ -1,0 +1,32 @@
+body {
+  background-color: #999;
+  font-size: 2.0em;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+input {
+  font-size: 1.5em;
+  background-color: #fff;
+  width: 790px;
+}
+
+h3 { 
+  margin: 0;
+  border-bottom: 1px #999 solid;
+}
+
+#container {
+  background-color: #ddd;
+  width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.metric {
+  display: inline-block;
+  font-weight: bold;
+}
+
+#how-does-it-work {
+  margin-top: 20px;
+}

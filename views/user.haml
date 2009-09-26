@@ -1,0 +1,37 @@
+- stats = stats(params[:username])
+
+%h3= "Twibate Stats for #{params[:username]}:" 
+
+%ul#stats
+
+  %li
+    Read
+    .metric= stats[:total]
+    tweets.
+
+  %li
+    Found
+    .metric= stats[:count]
+    to be twibates.
+    
+  %li
+    That's
+    .metric= stats[:percent]
+    of the time.
+
+%h3 Twibates the most with:
+
+%ul#twibates
+
+  - stats[:twibates].sort { |a,b| b.last <=> a.last }.each do |user, count|
+  
+    %li
+      .metric= count
+      times with
+      %a{ :href => "/#{user}"}= user
+
+%h3 How does this work?
+
+#how-does-it-work
+  View the source on
+  %a{ :href => 'http://github.com/ddollar/twibater' } Github
